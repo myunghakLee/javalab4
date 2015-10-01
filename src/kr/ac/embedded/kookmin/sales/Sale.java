@@ -12,6 +12,8 @@ public class Sale {
 	public Sale() {
 		name = "No name yet";
 		price = 0;
+		
+		
 	}
 	
 	/**
@@ -20,6 +22,8 @@ public class Sale {
 	public Sale(String theName, double thePrice) {
 		setName(theName);
 		setPrice(thePrice);
+		
+
 	}
 	
 	public Sale(Sale originalObject) {

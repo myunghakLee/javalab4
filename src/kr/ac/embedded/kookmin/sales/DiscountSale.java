@@ -8,53 +8,68 @@ package kr.ac.embedded.kookmin.sales;
  */
 
 public class DiscountSale extends Sale {
+
 	private double	discount;	// A percent of the price. Cannot be negative.
-								
-	public DiscountSale() {
-		/** 구현 하시오 **/ 
-	}
 	
+	public DiscountSale() {
+		discount = 0;
+		/** 援ы쁽 �븯�떆�삤 **/ 
+	}
 	/**
 	 * Precondition: theName is a nonempty string; thePrice is nonnegative;
 	 * theDiscount is expressed as a percent of the price and is nonnegative.
 	 */
 	public DiscountSale(String theName, double thePrice, double theDiscount) {
-		/** 구현 하시오 **/ 
+		discount=theDiscount;
+		this.setPrice(thePrice);
+		this.setName(theName);
+		
 	}
-	
 	public DiscountSale(DiscountSale originalObject) {
-		/** 구현 하시오 **/ 
+		discount=originalObject.discount;
+		this.setPrice(originalObject.getPrice());
+		this.setName(originalObject.getName());
+
 	}
 	
 	public static void announcement() {
-		System.out.println("This is the DiscountSale class.");
+		
 	}
 	
 	public double bill() {
-		/** 구현 하시오 **/ 
+		
+		return this.getPrice()*(1-(discount/100));
+		/** 援ы쁽 �븯�떆�삤 **/
 	}
 	
 	public double getDiscount() {
-		/** 구현 하시오 **/ 
+	
+		return discount;
 	}
 	
 	/**
 	 * Precondition: Discount is nonnegative.
 	 */
 	public void setDiscount(double newDiscount) {
-		/** 구현 하시오 **/ 
+	
+		discount = newDiscount;
 	}
 	
 	public String toString() {
-		return (getName() + " Price = $" + getPrice() + " Discount = " + discount + "%\n" + "   Total cost = $" + bill());
+	
+		return (this.getName() + " price = $"+this.getPrice()+ "Discount = "+discount+ "%\n\t Total coast = $" + this.bill());
 	}
 	
 	public boolean equals(Object otherObject) {
-		/** 구현 하시오 **/ 
+		
+		return (this==otherObject);
 	}
 	
 	
 	public DiscountSale clone() {
-		/** 구현 하시오....  임시생성자 사용 **/ 
+		
+		return this;
+		
+		/** 援ы쁽 �븯�떆�삤....  �엫�떆�깮�꽦�옄 �궗�슜 **/ 
 	}
 }
