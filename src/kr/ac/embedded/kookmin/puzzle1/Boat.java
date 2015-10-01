@@ -6,7 +6,7 @@ public class Boat {
 		length = len;
 	}
 	
-	public int getLength() {
+	public int getLength() {z
 		  /** **/
 	}
 	

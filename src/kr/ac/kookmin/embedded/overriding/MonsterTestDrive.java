@@ -18,9 +18,9 @@ public class MonsterTestDrive {
 
 class Monster {
 
-	boolean frighten(int x) {
+	int frighten(int x) {
 		System.out.println("arrrgh");
-		return false;
+		return 1;
 
 	}
 
@@ -28,9 +28,9 @@ class Monster {
 
 class Vampire extends Monster {
 
-	boolean frighten(int x) {
+	int frighten(int x) {
 		System.out.println("a bite?");
-		return false;
+		return 0;
 
 	}
 

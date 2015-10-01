@@ -14,7 +14,7 @@ public class ArrayListMagnet {
 		printAL(a);
 		
 		a.remove(2);
-		
+		 
 		
 		
 		if(a.contains("three"))
