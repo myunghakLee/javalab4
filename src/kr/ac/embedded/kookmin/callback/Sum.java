@@ -1,13 +1,17 @@
 package kr.ac.embedded.kookmin.callback;
 
+
+
 public class Sum  {
 
 	private int number = 0;
 	private int maxNumber = 0;
 	private OnMaxNumberCb MyCallaback;
-
+	
 	
 	public void setOnMaxNumberCb(OnMaxNumberCb callback) {
+
+		
 		MyCallaback = callback;
 	}
 	public void setMaxNumber (int max) {
@@ -22,6 +26,8 @@ public class Sum  {
 				MyCallaback.onMaxNumber(number, number-maxNumber);
 			}
 		}
+	
+		
 		return number;
 	}
 	
