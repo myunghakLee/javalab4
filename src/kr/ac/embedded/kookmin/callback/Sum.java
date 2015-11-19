@@ -10,8 +10,6 @@ public class Sum  {
 	
 	
 	public void setOnMaxNumberCb(OnMaxNumberCb callback) {
-
-		
 		MyCallaback = callback;
 	}
 	public void setMaxNumber (int max) {
